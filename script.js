@@ -33,7 +33,7 @@ const rodadas = [
     {
         nome: "1ª Rodada",
         jogos: [
-            {a:times[2], b:times[1], ga:null, gb:null},
+            {a:times[2], b:times[1], ga:1, gb:0},
             {a:times[5], b:times[4], ga:null, gb:null},
             {a:times[3], b:times[0], ga:null, gb:null}
         ]

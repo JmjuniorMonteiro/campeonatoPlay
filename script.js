@@ -18,6 +18,21 @@ const escudos = {
     "New Castle (Gilciney)": "img/newcastle.png"
 };
 
+function formatarNomeTime(nome, escudo) {
+    const match = nome.match(/^(.*)\s\((.*)\)$/);
+    if (!match) return nome;
+
+    return `
+        <span class="linha-time">
+            <span class="nome-time">${match[1]}</span>
+            <img src="${escudo}" class="escudo-inline">
+        </span>
+        <span class="nome-jogador">(${match[2]})</span>
+    `;
+}
+
+
+
 // ===== BASE =====
 const tabela = {};
 const confrontoDireto = {};
@@ -149,9 +164,8 @@ function renderTabela() {
         html += `
             <tr class="${classe}">
                 <td>${i+1}</td>
-                <td>
-                    ${t}
-                    <img src="${escudos[t]}" class="escudo">
+                <td class="time-cell">
+                    ${formatarNomeTime(t, escudos[t])}
                 </td>
                 <td>${d.pts}</td>
                 <td>${d.v}</td>
@@ -175,9 +189,13 @@ function renderRodadas() {
         r.jogos.forEach(j => {
             html += `
             <div class="jogo">
-                <span><img src="${escudos[j.a]}" class="escudo">${j.a}</span>
+                <span class="time-esq">
+                    ${formatarNomeTime(j.a, escudos[j.a])}
+                </span>
                 <span class="placar">${j.ga ?? "—"} x ${j.gb ?? "—"}</span>
-                <span>${j.b}<img src="${escudos[j.b]}" class="escudo"></span>
+                <span class="time-dir">
+                    ${formatarNomeTime(j.b, escudos[j.b])}
+                </span>
             </div>`;
         });
     });
@@ -187,24 +205,54 @@ function renderRodadas() {
 // ===== SEMIFINAL =====
 function renderSemifinal() {
     if (!todasRodadasConcluidas()) {
-        document.getElementById("semifinal").innerHTML =
-            `<div class="jogo"><span>1º Colocado</span><span class="placar">— x —</span><span>4º Colocado</span></div>
-            <div class="jogo"><span>2º Colocado</span><span class="placar">— x —</span><span>3º Colocado</span></div>`;
+        document.getElementById("semifinal").innerHTML = `
+            <div class="jogo">
+                <span class="time-esq">1º Colocado</span>
+                <span class="placar">— x —</span>
+                <span class="time-dir">4º Colocado</span>
+            </div>
+            <div class="jogo">
+                <span class="time-esq">2º Colocado</span>
+                <span class="placar">— x —</span>
+                <span class="time-dir">3º Colocado</span>
+            </div>
+        `;
         return;
     }
 
     const c = classificacao();
     document.getElementById("semifinal").innerHTML = `
-        <div class="jogo"><span>${c[0]}</span><span class="placar">— x —</span><span>${c[3]}</span></div>
-        <div class="jogo"><span>${c[1]}</span><span class="placar">— x —</span><span>${c[2]}</span></div>
+        <div class="jogo">
+            <span class="time-esq">${formatarNomeTime(c[0], escudos[c[0]])}</span>
+            <span class="placar">— x —</span>
+            <span class="time-dir">${formatarNomeTime(c[3], escudos[c[3]])}</span>
+        </div>
+        <div class="jogo">
+            <span class="time-esq">${formatarNomeTime(c[1], escudos[c[1]])}</span>
+            <span class="placar">— x —</span>
+            <span class="time-dir">${formatarNomeTime(c[2], escudos[c[2]])}</span>
+        </div>
     `;
 }
 
+
 // ===== FINAL =====
 function renderFinal() {
-    document.getElementById("final").innerHTML =
-        `<div class="jogo"><span>Vencedor SF1</span><span class="placar">— x —</span><span>Vencedor SF2</span></div>`;
-        //`<div class="jogo"><span>${times[2]}</span><span class="placar">— x —</span><span>${times[3]}</span></div>`;
+    document.getElementById("final").innerHTML = `
+        <div class="jogo">
+            <span class="time-esq">Vencedor SF1</span>
+            <span class="placar">— x —</span>
+            <span class="time-dir">Vencedor SF2</span>
+        </div>
+    `;
+
+    // document.getElementById("final").innerHTML = `
+    // <div class="jogo">
+    //     <span class="time-esq">${formatarNomeTime(times[2], escudos[times[2]])}</span>
+    //     <span class="placar">— x —</span>
+    //     <span class="time-dir">${formatarNomeTime(times[3], escudos[times[3]])}</span>
+    // </div>
+    // `;
 }
 
 // ===== INIT =====

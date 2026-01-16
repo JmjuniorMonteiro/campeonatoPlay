@@ -1,6 +1,6 @@
 // ===== TIMES =====
 const times = [
-    "Atl. Madrid (Lucas)",
+    "Ath. Bilbao (Lucas)",
     "B. Dortmund (Heitor)",
     "Chelsea (Euler)",
     "Juventus (Júnior)",
@@ -10,7 +10,7 @@ const times = [
 
 // ===== ESCUDOS =====
 const escudos = {
-    "Atl. Madrid (Lucas)": "img/atletico.png",
+    "Ath. Bilbao (Lucas)": "img/bilbao.png",
     "B. Dortmund (Heitor)": "img/dortmund.png",
     "Chelsea (Euler)": "img/chelsea.png",
     "Juventus (Júnior)": "img/juventus.png",

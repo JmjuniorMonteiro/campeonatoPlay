@@ -110,13 +110,6 @@ tr.eliminado {
     margin: 0 6px;
 }
 
-/* RESPONSIVO */
-@media (max-width: 600px) {
-    .jogo {
-        grid-template-columns: 1fr 70px 1fr;
-        font-size: 14px;
-    }
-}
 /* ===== NOME + ESCUDO ===== */
 .linha-time {
     display: inline-flex;
@@ -141,8 +134,32 @@ tr.eliminado {
     height: 18px;
 }
 
+/* ===== CRITÉRIOS DE DESEMPATE (ABAIXO DA TABELA) ===== */
+.criterios {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+}
+
+.criterios strong {
+    font-size: 12px;
+    color: #0a3d62;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.criterios ol {
+    margin: 0;
+    padding-left: 18px;
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
+    .jogo {
+        grid-template-columns: 1fr 70px 1fr;
+        font-size: 14px;
+    }
+
     .nome-time {
         font-size: 13px;
     }
@@ -154,5 +171,9 @@ tr.eliminado {
     .escudo-inline {
         width: 16px;
         height: 16px;
+    }
+
+    .criterios {
+        font-size: 11px;
     }
 }

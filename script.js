@@ -84,6 +84,46 @@ const rodadas = [
             {a:times[4], b:times[3], ga:null, gb:null},
             {a:times[1], b:times[5], ga:null, gb:null}
         ]
+    },
+    {
+        nome: "6ª Rodada",
+        jogos: [
+            {a:times[1], b:times[2], ga:null, gb:null},
+            {a:times[4], b:times[5], ga:null, gb:null},
+            {a:times[0], b:times[2], ga:null, gb:null}
+        ]
+    },
+    {
+        nome: "7ª Rodada",
+        jogos: [
+            {a:times[2], b:times[3], ga:null, gb:null},
+            {a:times[5], b:times[0], ga:null, gb:null},
+            {a:times[1], b:times[4], ga:null, gb:null}
+        ]
+    },
+    {
+        nome: "8ª Rodada",
+        jogos: [
+            {a:times[4], b:times[2], ga:null, gb:null},
+            {a:times[0], b:times[1], ga:null, gb:null},
+            {a:times[3], b:times[5], ga:null, gb:null}
+        ]
+    },
+    {
+        nome: "9ª Rodada",
+        jogos: [
+            {a:times[2], b:times[5], ga:null, gb:null},
+            {a:times[1], b:times[3], ga:null, gb:null},
+            {a:times[4], b:times[0], ga:null, gb:null}
+        ]
+    },
+    {
+        nome: "10ª Rodada",
+        jogos: [
+            {a:times[0], b:times[2], ga:null, gb:null},
+            {a:times[3], b:times[4], ga:null, gb:null},
+            {a:times[5], b:times[1], ga:null, gb:null}
+        ]
     }
 ];
 
@@ -178,8 +218,21 @@ function renderTabela() {
     });
 
     document.getElementById("classificacao").innerHTML = html;
-}
 
+    document.getElementById("criterios").innerHTML = `
+        <div class="criterios">
+            <strong>Critérios de desempate</strong>
+            <ol>
+                <li>Pontos</li>
+                <li>Vitórias</li>
+                <li>Saldo de gols</li>
+                <li>Gols pró</li>
+                <li>Confronto direto</li>
+                <li>Sorteio</li>
+            </ol>
+        </div>
+    `;
+}
 
 // ===== RODADAS =====
 function renderRodadas() {

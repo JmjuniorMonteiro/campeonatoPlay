@@ -256,13 +256,14 @@ function renderRodadas() {
 
                 <span class="acao-video">
                     ${j.video ? `
-                        <a class="link-video" 
-                           href="${j.video}" 
-                           target="_blank" 
-                           title="Assistir jogo no YouTube">
-                           ▶️
+                        <a class="link-video"
+                        href="javascript:void(0)"
+                        onclick="abrirModal('${j.video}')"
+                        title="Assistir jogo">
+                        ▶️
                         </a>` : ""}
                 </span>
+
             </div>`;
         });
     });
@@ -322,6 +323,34 @@ function renderFinal() {
     // </div>
     // `;
 }
+
+function abrirModal(videoUrl) {
+    const modal = document.getElementById("modalVideo");
+    const iframe = document.getElementById("iframeVideo");
+    const link = document.getElementById("linkYoutube");
+
+    const videoId = extrairVideoId(videoUrl);
+
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    link.href = videoUrl;
+
+    modal.style.display = "flex";
+}
+
+function fecharModal() {
+    const modal = document.getElementById("modalVideo");
+    const iframe = document.getElementById("iframeVideo");
+
+    iframe.src = "";
+    modal.style.display = "none";
+}
+
+function extrairVideoId(url) {
+    const regex = /(?:v=|\/)([0-9A-Za-z_-]{11})/;
+    const match = url.match(regex);
+    return match ? match[1] : "";
+}
+
 
 // ===== INIT =====
 function atualizar() {

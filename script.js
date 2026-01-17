@@ -48,25 +48,25 @@ const rodadas = [
     {
         nome: "1ª Rodada",
         jogos: [
-            {a:times[2], b:times[1], ga:3, gb:1},
-            {a:times[5], b:times[4], ga:6, gb:5},
-            {a:times[3], b:times[0], ga:6, gb:6}
+            {a:times[2], b:times[1], ga:3, gb:1, video: "https://www.youtube.com/watch?v=X6pqA8vofY4&t=2s"},
+            {a:times[5], b:times[4], ga:6, gb:5, video: "https://www.youtube.com/watch?v=VoPBbHUGZpc"},
+            {a:times[3], b:times[0], ga:6, gb:6, video: "https://www.youtube.com/watch?v=W-prOC1oKn0"}
         ]
     },
     {
         nome: "2ª Rodada",
         jogos: [
-            {a:times[3], b:times[2], ga:5, gb:2},
+            {a:times[3], b:times[2], ga:5, gb:2, video: "https://www.youtube.com/watch?v=Om9R6oT-wl8"},
             {a:times[0], b:times[5], ga:5, gb:5},
-            {a:times[4], b:times[1], ga:4, gb:9}
+            {a:times[4], b:times[1], ga:4, gb:9, video: "https://www.youtube.com/watch?v=06ThWyKGG4U&t=1s"}
         ]
     },
     {
         nome: "3ª Rodada",
         jogos: [
-            {a:times[2], b:times[4], ga:2, gb:2}, //'E x M'
-            {a:times[1], b:times[0], ga:3, gb:5}, //'H x L'
-            {a:times[5], b:times[3], ga:1, gb:4} //'G x J'
+            {a:times[2], b:times[4], ga:2, gb:2, video: "https://www.youtube.com/watch?v=KAwCgZUfazQ"}, //'E x M'
+            {a:times[1], b:times[0], ga:3, gb:5, video: "https://www.youtube.com/watch?v=tTnVOkAUAFk"}, //'H x L'
+            {a:times[5], b:times[3], ga:1, gb:4, video: "https://www.youtube.com/watch?v=yDthXYc2-DY"} //'G x J'
         ]
     },
     {
@@ -245,15 +245,30 @@ function renderRodadas() {
                 <span class="time-esq">
                     ${formatarNomeTime(j.a, escudos[j.a])}
                 </span>
-                <span class="placar">${j.ga ?? "—"} x ${j.gb ?? "—"}</span>
+
+                <span class="placar">
+                    ${j.ga ?? "—"} x ${j.gb ?? "—"}
+                </span>
+
                 <span class="time-dir">
                     ${formatarNomeTime(j.b, escudos[j.b])}
+                </span>
+
+                <span class="acao-video">
+                    ${j.video ? `
+                        <a class="link-video" 
+                           href="${j.video}" 
+                           target="_blank" 
+                           title="Assistir jogo no YouTube">
+                           ▶️
+                        </a>` : ""}
                 </span>
             </div>`;
         });
     });
     document.getElementById("rodadas").innerHTML = html;
 }
+
 
 // ===== SEMIFINAL =====
 function renderSemifinal() {

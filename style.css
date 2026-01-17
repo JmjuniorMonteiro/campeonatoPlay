@@ -67,10 +67,11 @@ tr.eliminado {
     margin-bottom: 8px;
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 90px 1fr;
+    grid-template-columns: 1fr 90px 1fr 40px;
     align-items: center;
     border-left: 4px solid #ccc;
 }
+
 
 .time-esq {
     text-align: right;
@@ -156,7 +157,7 @@ tr.eliminado {
 /* MOBILE */
 @media (max-width: 600px) {
     .jogo {
-        grid-template-columns: 1fr 70px 1fr;
+        grid-template-columns: 1fr 70px 1fr 40px;
         font-size: 14px;
     }
 
@@ -187,4 +188,19 @@ tr.eliminado {
     max-width: 100%;
     border-radius: 8px;
 }
+
+.acao-video {
+    text-align: center;
+}
+
+.link-video {
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-video:hover {
+    opacity: 0.7;
+}
+
 

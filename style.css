@@ -177,3 +177,14 @@ tr.eliminado {
         font-size: 11px;
     }
 }
+
+.live-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.live-container iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+

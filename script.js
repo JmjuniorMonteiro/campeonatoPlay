@@ -5,7 +5,7 @@ const times = [
     "Chelsea (Euler)",
     "Juventus (Júnior)",
     "Milan (Myckson)",
-    "New Castle (Gilciney)"
+    "Tottenham (Gilciney)"
 ];
 
 // ===== ESCUDOS =====
@@ -15,7 +15,7 @@ const escudos = {
     "Chelsea (Euler)": "img/chelsea.png",
     "Juventus (Júnior)": "img/juventus.png",
     "Milan (Myckson)": "img/milan.png",
-    "New Castle (Gilciney)": "img/newcastle.png"
+    "Tottenham (Gilciney)": "img/tottenham.png"
 };
 
 function formatarNomeTime(nome, escudo) {

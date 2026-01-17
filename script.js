@@ -65,7 +65,7 @@ const rodadas = [
         nome: "3ª Rodada",
         jogos: [
             {a:times[2], b:times[4], ga:2, gb:2}, //'E x M'
-            {a:times[1], b:times[0], ga:null, gb:null}, //'H x L'
+            {a:times[1], b:times[0], ga:3, gb:5}, //'H x L'
             {a:times[5], b:times[3], ga:null, gb:null} //'G x J'
         ]
     },

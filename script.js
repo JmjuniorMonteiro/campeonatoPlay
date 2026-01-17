@@ -50,7 +50,7 @@ const rodadas = [
         jogos: [
             {a:times[2], b:times[1], ga:3, gb:1},
             {a:times[5], b:times[4], ga:6, gb:5},
-            {a:times[3], b:times[0], ga:null, gb:null}
+            {a:times[3], b:times[0], ga:6, gb:6}
         ]
     },
     {

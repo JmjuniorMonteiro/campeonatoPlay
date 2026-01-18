@@ -82,7 +82,7 @@ const rodadas = [
         jogos: [
             {a:times[2], b:times[0], ga:3, gb:4, video: "https://www.youtube.com/watch?v=srpAgOIK8Qg"},
             {a:times[4], b:times[3], ga:1, gb:5, video: "https://www.youtube.com/watch?v=T2I4AKVbx8s"},
-            {a:times[1], b:times[5], ga:null, gb:null, video: ""}
+            {a:times[1], b:times[5], ga:2, gb:5, video: "https://www.youtube.com/watch?v=2m7Uwa7I73Y"}
         ]
     },
     {

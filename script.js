@@ -80,7 +80,7 @@ const rodadas = [
     {
         nome: "5ª Rodada",
         jogos: [
-            {a:times[2], b:times[0], ga:null, gb:null, video: ""},
+            {a:times[2], b:times[0], ga:3, gb:4, video: "https://www.youtube.com/watch?v=srpAgOIK8Qg"},
             {a:times[4], b:times[3], ga:null, gb:null, video: ""},
             {a:times[1], b:times[5], ga:null, gb:null, video: ""}
         ]

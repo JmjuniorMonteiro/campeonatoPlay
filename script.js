@@ -97,7 +97,7 @@ const rodadas = [
         nome: "7ª Rodada",
         jogos: [
             {a:times[2], b:times[3], ga:null, gb:null, video: ""},
-            {a:times[5], b:times[0], ga:null, gb:null, video: ""},
+            {a:times[5], b:times[0], ga:2, gb:9, video: ""},
             {a:times[1], b:times[4], ga:null, gb:null, video: ""}
         ]
     },

@@ -90,7 +90,7 @@ const rodadas = [
         jogos: [
             {a:times[1], b:times[2], ga:5, gb:6, video: ""},
             {a:times[4], b:times[5], ga:null, gb:null, video: ""},
-            {a:times[0], b:times[3], ga:null, gb:null, video: ""}
+            {a:times[0], b:times[3], ga:1, gb:4, video: ""}
         ]
     },
     {

@@ -98,7 +98,7 @@ const rodadas = [
         jogos: [
             {a:times[2], b:times[3], ga:4, gb:2, video: ""},
             {a:times[5], b:times[0], ga:2, gb:9, video: ""},
-            {a:times[1], b:times[4], ga:null, gb:null, video: ""}
+            {a:times[1], b:times[4], ga:6, gb:1, video: ""}
         ]
     },
     {
@@ -113,7 +113,7 @@ const rodadas = [
         nome: "9ª Rodada",
         jogos: [
             {a:times[2], b:times[5], ga:null, gb:null, video: ""},
-            {a:times[1], b:times[3], ga:null, gb:null, video: ""},
+            {a:times[1], b:times[3], ga:3, gb:2, video: ""},
             {a:times[4], b:times[0], ga:null, gb:null, video: ""}
         ]
     },
@@ -121,7 +121,7 @@ const rodadas = [
         nome: "10ª Rodada",
         jogos: [
             {a:times[0], b:times[2], ga:null, gb:null, video: ""},
-            {a:times[3], b:times[4], ga:null, gb:null, video: ""},
+            {a:times[3], b:times[4], ga:6, gb:1, video: ""},
             {a:times[5], b:times[1], ga:null, gb:null, video: ""}
         ]
     }
